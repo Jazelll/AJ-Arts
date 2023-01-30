@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to left, #fefcf3 0%, #f0dbdb 100%);
+    font-family: 'Marcellus', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0.6em;
+    background-color: rgb(110, 110, 110);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: white;
+}
+
+header {
+    width: 100%;
+    background:#F0DBDB;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+}
+
+a, li {
+    text-decoration: none;
+    list-style: none;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: 'Kaushan Script', cursive;;
+}
+
+h2 {
+    font-size: 50px;
+    font-family: 'Kaushan Script', cursive;;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Marcellus', serif;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 8rem;
+    height: 80px;
+}
+
+.navbar .brand {
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+.navbar .links{
+    width: 30%;
+}
+
+.navbar .links a {
+    font-family: 'Marcellus', serif;
+    color: black;
+    font-size: clamp(12px, 16px, 20px);
+}
+
+.navbar .links ul {
+    display: flex;
+    justify-content: space-around;
+}
+/* -------------------------------------- */
+
+/* HOME */
+#home{
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+#home .cover img{
+    position:absolute;
+    z-index: 2;
+    width: 100%;
+}
+
+#home .container div{
+    width: 50%;
+}  
+
+.container {
+    position: absolute;
+    z-index: 3;
+    padding: 5rem;
+    margin-top: 7rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#home .container {
+    flex-direction: row-reverse;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.container .logo-container .logo {
+    width: 70%;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.details {
+   text-align: justify;
+   margin-top: 20rem;
+}
+
+.container .details {
+    padding-right: 10rem;
+}
+/*---END OF HOME---*/
+
+/*---CATEGORIES---*/
+#categories {
+    height: 90vh;
+    padding: 2rem 8rem;
+}
+
+#categories section {
+    display: none;
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+}
+
+.menu input {
+    display: none;
+}
+
+.menu label {
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'JetBrains Mono';
+    font-weight: 600;
+}
+
+.menu label:hover {
+    font-weight: 900;
+}
+
+#keychains:checked ~ #keychainsCont, 
+#clips:checked ~ #clipsCont,
+#tags:checked ~ #tagsCont,
+#picks:checked ~ #picksCont,
+#bookmarks:checked ~ #bookmarksCont {
+    display: block;
+}
