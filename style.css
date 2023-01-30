@@ -145,16 +145,20 @@ p {
     padding: 2rem 8rem;
 }
 
-#categories section {
-    display: none;
-}
-
 .menu {
     position: relative;
     display: flex;
     justify-content: space-evenly;
     padding: 2rem 0;
 }
+
+.menu section {
+    display: none;
+    position: absolute;
+    padding: 3rem;
+    z-index: -1;
+}
+
 
 .menu input {
     display: none;
@@ -171,10 +175,87 @@ p {
     font-weight: 900;
 }
 
+input:checked + label {
+    font-weight: 900;
+    color: #7d5300;
+}
+
 #keychains:checked ~ #keychainsCont, 
 #clips:checked ~ #clipsCont,
 #tags:checked ~ #tagsCont,
 #picks:checked ~ #picksCont,
 #bookmarks:checked ~ #bookmarksCont {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.card {
+    width: 15vw;
+    height: 35vh;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #f5ce7f;
+    box-shadow: 0 6px 8px -2px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+
+.card .head-image {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+}
+
+.card .head-image img { 
+    width:  15vw;
+    height: 25vh;    
+    object-fit: scale-down;
+    position: absolute;
+    top: 15px;
+}
+
+.card .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 18%;
+    width: 100%;
+    height: 50%;
+    padding: 1.5px;
+    color: #000000;
+}
+
+.card-body .details {
+    width: 90%;
+    height: 100%;
+    position: relative;
+}
+
+.card-body .details h1 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #000000;
+}
+
+.card-body .details .category-tag {
+    text-align: center;
+    border-radius: 5rem;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 6px;
+    text-transform: uppercase;
+    background-color: #f5ce7f;
+}
+
+.card-body .details p {
+    font-size: 14px;
+    font-weight: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
