@@ -142,7 +142,8 @@ p {
 /*---CATEGORIES---*/
 #categories {
     height: 90vh;
-    padding: 2rem 8rem;
+    padding: 5rem 8rem;
+    margin-bottom: 10rem;
 }
 
 .menu {
@@ -158,7 +159,6 @@ p {
     padding: 3rem;
     z-index: -1;
 }
-
 
 .menu input {
     display: none;
@@ -258,4 +258,16 @@ input:checked + label {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+/* ----- END OF CATEGORIES ----- */
+
+/* ----- FAQs ----- */
+#faqs {
+    height: 90vh;
+    padding: 1rem 8rem;
+}
+
+.faqs-ctn {
+    margin: 1rem 3rem;
+    padding: 2rem 3rem;
 }
