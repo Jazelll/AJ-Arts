@@ -29,7 +29,7 @@ html {
 
 header {
     width: 100%;
-    background:#F0DBDB;
+    background:#f0dbdba1;
     position: fixed;
     z-index: 100;
     top: 0;
@@ -141,7 +141,7 @@ p {
 
 /*---CATEGORIES---*/
 #categories {
-    height: 90vh;
+    min-height: 130vh;
     padding: 5rem 8rem;
     margin-bottom: 10rem;
 }
@@ -265,9 +265,35 @@ input:checked + label {
 #faqs {
     height: 90vh;
     padding: 1rem 8rem;
+    position: relative;
 }
 
 .faqs-ctn {
     margin: 1rem 3rem;
     padding: 2rem 3rem;
+}
+
+.dropdown {
+    margin-top: 15px;
+    background-color: rgb(53, 53, 53);
+    color: rgb(255, 253, 253);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active, .dropdown:hover {
+    background-color: #ccc;
+}
+
+.content {
+    padding: 2rem;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
