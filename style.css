@@ -271,6 +271,10 @@ input:checked + label {
 .faqs-ctn {
     margin: 1rem 3rem;
     padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
 }
 
 .dropdown {
@@ -286,14 +290,26 @@ input:checked + label {
     transition: 0.4s;
 }
 
+.dropdown:after {
+    content: '\02C5';
+    float: right;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+
 .active, .dropdown:hover {
     background-color: #ccc;
 }
 
+.active:after {
+    content: "\2796";
+}
+
 .content {
-    padding: 2rem;
+    padding: 0 20px;
     background-color: white;
     max-height: 0;
+    width: 100%;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.3s ease-out;
 }
