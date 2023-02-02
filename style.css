@@ -9,7 +9,7 @@
 }
 
 body {
-    background: linear-gradient(to left, #fefcf3 0%, #f0dbdb 100%);
+    background: linear-gradient(to bottom, #f0dbdb 0%, #f5ebe0 100%);
     font-family: 'Marcellus', serif;
 }
 
@@ -52,6 +52,11 @@ h2 {
 
 p {
     font-size: 20px;
+    font-family: 'Marcellus', serif;
+}
+
+button {
+    font-size: 18px;
     font-family: 'Marcellus', serif;
 }
 
@@ -199,6 +204,7 @@ input:checked + label {
     overflow: hidden;
     position: relative;
     border: 1px solid #f5ce7f;
+    background: linear-gradient(to bottom right, #dba39a 0%, #ebd8c3 100%);
     box-shadow: 0 6px 8px -2px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
 }
@@ -272,20 +278,21 @@ input:checked + label {
     margin: 1rem 3rem;
     padding: 2rem 3rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     gap: 1rem;
 }
 
 .dropdown {
     margin-top: 15px;
-    background-color: rgb(53, 53, 53);
-    color: rgb(255, 253, 253);
+    background: linear-gradient(to bottom, #dba39a 0%, #f5ebe0 100%);
+    color: rgb(0, 0, 0);
     cursor: pointer;
     padding: 18px;
     width: 100%;
     text-align: left;
     border: none;
+    border-radius: 1rem;
     outline: none;
     transition: 0.4s;
 }
@@ -307,9 +314,17 @@ input:checked + label {
 
 .content {
     padding: 0 20px;
-    background-color: white;
+    background: linear-gradient(to top, #dba39a 0%, #f5ebe0 100%);
+    border-radius: 1rem;
     max-height: 0;
     width: 100%;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    padding: 1rem;
+    font-size: 18px;
+    text-align: justify;
 }
